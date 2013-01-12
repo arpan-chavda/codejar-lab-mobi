@@ -1,0 +1,141 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<title>Codejar Software Lab</title>
+		<link href="http://ajax.googleapis.com/ajax/libs/dojo/1.6/dojox/mobile/themes/iphone/iphone.css" rel="stylesheet" />
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/dojo/1.6.0/dojo/dojo.xd.js" djConfig="isDebug:true, parseOnLoad:true"></script>
+		<script type="text/javascript">
+			// Use the lightweight parser
+			dojo.require("dojox.mobile.parser");
+			// Require Dojo mobile
+			dojo.require("dojox.mobile");
+			dojo.require("dojox.mobile.IconContainer");
+			dojo.require("dojox.mobile.FlippableView");
+			
+			//Require the compat if the client isn't Webkit-based
+			dojo.requireIf(!dojo.isWebKit,"dojox.mobile.compat");
+		
+		</script>
+	<style>
+		.redButton {
+			border-color: #cc3333;
+			background-image: url(images/red-button-bg.png);
+			background: -webkit-gradient(linear, left top, left bottom, from(#D3656D), to(#BC1320), color-stop(0.5, #C9404B), color-stop(0.5, #BC1421));
+		}
+		.redButtonSelected {
+			background-image: url(images/red-button-sel-bg.png);
+			background: -webkit-gradient(linear, left top, left bottom, from(#AF333C), to(#880E17), color-stop(0.5, #952B33), color-stop(0.5, #870F18));
+		}
+
+		</style>
+	</head>
+	<body>
+		
+		<div id="main" dojoType="dojox.mobile.View" selected="true">
+			<h1 dojoType="dojox.mobile.Heading">Codejar Software Lab</h1>
+			<ul dojoType="dojox.mobile.RoundRectList">
+				<li dojoType="dojox.mobile.ListItem" moveTo="about" transition="flip">
+					About
+				</li>
+				
+				<li dojoType="dojox.mobile.ListItem"  moveTo="tc">
+					Tech center
+				</li>
+				<li dojoType="dojox.mobile.ListItem"  moveTo="blog">
+					Blog
+				</li>
+				<li dojoType="dojox.mobile.ListItem"  moveTo="contact" >
+					Contact
+				</li>
+			</ul>
+		</div>
+
+		
+		<div id="about" dojoType="dojox.mobile.View">
+		<h1 dojoType="dojox.mobile.Heading" back="Back" moveTo="main">About</h1>
+		<div dojoType="dojox.mobile.RoundRect" shadow="true">
+    
+		<h4>As I grew up with my developments,</h4>
+		<h5>I was thinking to have own virtual lab and This is reality.</h5>
+		<h3>This supports my crazy ideas with immature developments</h3>
+	</div>
+		</div>
+		
+		<div id="blog" dojoType="dojox.mobile.View">
+		<h1 dojoType="dojox.mobile.Heading" back="Back" moveTo="main">Blog</h1>
+		<div dojoType="dojox.mobile.RoundRect" shadow="true">
+    
+		Blogging means sharing and I do it sometimes.
+		<center>
+		<a href="techjarblog.blogspot.in" target="_blank"><button id="btn5" btnClass="redButton" dojoType="dojox.mobile.Button" style="width:180px">Visit My Blog</button></a>
+		</center>
+		
+	</div>
+		</div>
+		
+		<div id="tc" dojoType="dojox.mobile.View">
+		<h1 dojoType="dojox.mobile.Heading" back="Back" moveTo="main">Tech center</h1>
+		<div dojoType="dojox.mobile.RoundRect" shadow="true">
+		Codejar Tech center is a public repository for all my development stuff and many more...</br>
+		<center>
+		<a href="http://codejar-lab.in/ctc" target="_blank"><button id="btn4" btnClass="redButton" dojoType="dojox.mobile.Button" style="width:180px">Click here to visit Tech center</button></a>
+		</center>
+		</div>
+		</div>
+		
+		<div id="contact" dojoType="dojox.mobile.View">
+		<div dojoType="dojox.mobile.FlippableView" selected="TRUE">
+		
+		<h1 dojoType="dojox.mobile.Heading" back="Back" moveTo="main">Contact</h1>
+		<div>
+		<center>
+		<h2 dojoType="dojox.mobile.RoundRectCategory">Swipe for more!!!</h2>
+		<p>
+		<div dojoType="dojox.mobile.RoundRect">
+		<a href="mailto:codejarcc@gmail.com"><button id="btn1" btnClass="redButton" dojoType="dojox.mobile.Button" style="width:180px">Email Dev</button></a>
+		</div>
+		</p>
+		 </center>
+		</div>
+		</div>
+		
+		
+		
+		
+		
+		<div dojoType="dojox.mobile.FlippableView">
+		<h1 dojoType="dojox.mobile.Heading" back="Back" moveTo="main">Contact</h1>
+		<div>
+		<center>
+		<h2 dojoType="dojox.mobile.RoundRectCategory">Swipe for more!!!</h2>
+		<p>
+		<div dojoType="dojox.mobile.RoundRect">
+		<a href="http://facebook.com/arpan.chavda"><button id="btn2" dojoType="dojox.mobile.Button"  style="width:180px">Catch him on Facebook</button></a>
+		</div>
+		</p>
+		 </center>
+		</div>
+		</div>
+		
+		
+		<div dojoType="dojox.mobile.FlippableView">
+		<h1 dojoType="dojox.mobile.Heading" back="Back" moveTo="main">Contact</h1>
+		<div>
+		<center>
+		<h2 dojoType="dojox.mobile.RoundRectCategory">Too enough swipe :p!!!</h2>
+		<p>
+		<div dojoType="dojox.mobile.RoundRect">
+		<a href="http://twitter.com/codejar"><button id="btn3"  dojoType="dojox.mobile.Button" class="baseBtn orangeBtn"  style="width:180px">Follow him on Twitter</button></a>
+		</div>
+		</p>
+		 </center>
+		</div>
+		
+		</div>
+		</div>
+		
+		</body>
+</html>
